@@ -1,0 +1,6 @@
+com\kpit\vehicleavailability\model\Vehicle.class
+com\kpit\vehicleavailability\controller\VehicleController.class
+com\kpit\App.class
+com\kpit\vehicleavailability\service\VehicleService.class
+com\kpit\vehicleavailability\util\HibernateUtil.class
+com\kpit\vehicleavailability\dao\VehicleDAO.class
