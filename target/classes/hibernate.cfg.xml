@@ -20,6 +20,7 @@
     <property name="hibernate.hbm2ddl.auto">update</property>
 
     <mapping class="com.kpit.vehicleavailability.model.Vehicle" />
+    <mapping class="com.kpit.vehicleavailability.model.User" />
     <!-- <mapping class="com.example.model.Certificate" /> -->
 
     </session-factory>

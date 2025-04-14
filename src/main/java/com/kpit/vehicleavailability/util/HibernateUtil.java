@@ -9,10 +9,8 @@ public class HibernateUtil {
 
     static {
         try {
-            // Create the SessionFactory from hibernate.cfg.xml
-            sessionFactory = new Configuration().configure("hibernate.cfg.xml")
-                .addAnnotatedClass(com.kpit.vehicleavailability.model.Vehicle.class)
-                .buildSessionFactory();
+            // Loads config from hibernate.cfg.xml and uses XML mappings
+            sessionFactory = new Configuration().configure().buildSessionFactory();
         } catch (Exception e) {
             e.printStackTrace();
         }
