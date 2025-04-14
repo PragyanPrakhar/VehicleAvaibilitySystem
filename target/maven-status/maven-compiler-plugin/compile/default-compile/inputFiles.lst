@@ -1,6 +1,9 @@
 F:\VehicleAvaibilitySystem\src\main\java\com\kpit\App.java
+F:\VehicleAvaibilitySystem\src\main\java\com\kpit\vehicleavailability\controller\AddVehicleController.java
+F:\VehicleAvaibilitySystem\src\main\java\com\kpit\vehicleavailability\controller\EditVehicleController.java
 F:\VehicleAvaibilitySystem\src\main\java\com\kpit\vehicleavailability\controller\LoginController.java
 F:\VehicleAvaibilitySystem\src\main\java\com\kpit\vehicleavailability\controller\SignupController.java
+F:\VehicleAvaibilitySystem\src\main\java\com\kpit\vehicleavailability\controller\VehicleByIdController.java
 F:\VehicleAvaibilitySystem\src\main\java\com\kpit\vehicleavailability\controller\VehicleController.java
 F:\VehicleAvaibilitySystem\src\main\java\com\kpit\vehicleavailability\dao\UserDAO.java
 F:\VehicleAvaibilitySystem\src\main\java\com\kpit\vehicleavailability\dao\VehicleDAO.java

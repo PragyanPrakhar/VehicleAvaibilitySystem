@@ -26,11 +26,22 @@ public class LoginController extends HttpServlet {
         User user = userService.loginUser(username, password);
 
         response.setContentType("text/plain");
+        /*
+         * if (user != null) {
+         * HttpSession session = request.getSession();
+         * session.setAttribute("user", user);
+         * response.getWriter().write("Login successful! Welcome " +
+         * user.getFirstName());
+         * }
+         */
         if (user != null) {
             HttpSession session = request.getSession();
             session.setAttribute("user", user);
+            session.setAttribute("isDealer", user.isDealer()); // ✅ this sets the boolean in session
             response.getWriter().write("Login successful! Welcome " + user.getFirstName());
-        } else {
+        }
+
+        else {
             response.setStatus(HttpServletResponse.SC_UNAUTHORIZED);
             response.getWriter().write("Invalid username or password.");
         }

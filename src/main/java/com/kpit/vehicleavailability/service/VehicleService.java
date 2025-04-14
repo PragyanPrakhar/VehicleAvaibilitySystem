@@ -17,4 +17,15 @@ public class VehicleService {
         // Fetch all vehicles from the DAO
         return vehicleDAO.getAllVehicles();
     }
+
+    public Vehicle getVehicleById(long id) {
+        return vehicleDAO.getVehicleById(id);
+    }
+    public boolean addVehicle(Vehicle vehicle) {
+        return vehicleDAO.addVehicle(vehicle);
+    }
+    public boolean updateVehicle(Vehicle vehicle) {
+        return vehicleDAO.updateVehicle(vehicle);
+    }
+
 }
