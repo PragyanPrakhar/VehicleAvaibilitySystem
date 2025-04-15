@@ -8,6 +8,9 @@ import org.hibernate.Transaction;
 import org.hibernate.Session;
 import org.hibernate.query.Query;
 
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
 import java.util.List;
 
 public class VehicleDAO {
@@ -51,5 +54,25 @@ public class VehicleDAO {
             return false;
         }
     }
+    public static boolean deleteVehicleById(long id) {
+        try (Session session = HibernateUtil.getSessionFactory().openSession()) {
+            session.beginTransaction();
+    
+            Vehicle vehicle = session.get(Vehicle.class, id);
+            if (vehicle != null) {
+                session.remove(vehicle);
+                session.getTransaction().commit();
+                return true;
+            } else {
+                session.getTransaction().rollback();
+                return false;
+            }
+    
+        } catch (Exception e) {
+            e.printStackTrace();
+            return false;
+        }
+    }
+    
     
 }

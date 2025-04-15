@@ -23,7 +23,8 @@ public class VehicleController extends HttpServlet {
     }
 
     @Override
-    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+    protected void doGet(HttpServletRequest request, HttpServletResponse response)
+            throws ServletException, IOException {
         // Fetch all vehicles from the database
         List<Vehicle> vehicles = vehicleService.getAllVehicles();
 

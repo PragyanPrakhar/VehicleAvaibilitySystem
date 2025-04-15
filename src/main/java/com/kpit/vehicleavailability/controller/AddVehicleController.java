@@ -19,7 +19,8 @@ public class AddVehicleController extends HttpServlet {
     }
 
     @Override
-    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+    protected void doPost(HttpServletRequest request, HttpServletResponse response)
+            throws ServletException, IOException {
         // Set the content type of the response
         response.setContentType("application/json");
 

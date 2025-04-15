@@ -1,5 +1,6 @@
 F:\VehicleAvaibilitySystem\src\main\java\com\kpit\App.java
 F:\VehicleAvaibilitySystem\src\main\java\com\kpit\vehicleavailability\controller\AddVehicleController.java
+F:\VehicleAvaibilitySystem\src\main\java\com\kpit\vehicleavailability\controller\DeleteVehicleController.java
 F:\VehicleAvaibilitySystem\src\main\java\com\kpit\vehicleavailability\controller\EditVehicleController.java
 F:\VehicleAvaibilitySystem\src\main\java\com\kpit\vehicleavailability\controller\LoginController.java
 F:\VehicleAvaibilitySystem\src\main\java\com\kpit\vehicleavailability\controller\SignupController.java
@@ -7,6 +8,7 @@ F:\VehicleAvaibilitySystem\src\main\java\com\kpit\vehicleavailability\controller
 F:\VehicleAvaibilitySystem\src\main\java\com\kpit\vehicleavailability\controller\VehicleController.java
 F:\VehicleAvaibilitySystem\src\main\java\com\kpit\vehicleavailability\dao\UserDAO.java
 F:\VehicleAvaibilitySystem\src\main\java\com\kpit\vehicleavailability\dao\VehicleDAO.java
+F:\VehicleAvaibilitySystem\src\main\java\com\kpit\vehicleavailability\filter\CORSFilter.java
 F:\VehicleAvaibilitySystem\src\main\java\com\kpit\vehicleavailability\model\User.java
 F:\VehicleAvaibilitySystem\src\main\java\com\kpit\vehicleavailability\model\Vehicle.java
 F:\VehicleAvaibilitySystem\src\main\java\com\kpit\vehicleavailability\service\UserService.java

@@ -8,7 +8,9 @@ com\kpit\vehicleavailability\controller\EditVehicleController.class
 com\kpit\vehicleavailability\controller\VehicleByIdController.class
 com\kpit\vehicleavailability\controller\LoginController.class
 com\kpit\vehicleavailability\model\User.class
+com\kpit\vehicleavailability\controller\DeleteVehicleController.class
 com\kpit\vehicleavailability\controller\VehicleController.class
 com\kpit\vehicleavailability\dao\UserDAO.class
+com\kpit\vehicleavailability\filter\CORSFilter.class
 com\kpit\vehicleavailability\controller\SignupController.class
 com\kpit\vehicleavailability\dao\VehicleDAO.class
