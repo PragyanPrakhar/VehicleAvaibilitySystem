@@ -17,10 +17,12 @@ public class UserService {
         if (userDAO.userExists(user.getUsername())) {
             throw new RuntimeException("Username already taken");
         }
+        if (userDAO.userExistsByMail(user.getEmail())) {
+            throw new RuntimeException("Email already registered");
+        }
         // Hash the password before saving
         String hashedPassword = BCrypt.hashpw(user.getPassword(), BCrypt.gensalt());
         user.setPassword(hashedPassword);
-
         userDAO.saveUser(user);
     }
 

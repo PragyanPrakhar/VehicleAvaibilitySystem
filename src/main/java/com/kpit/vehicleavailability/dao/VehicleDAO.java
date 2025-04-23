@@ -7,10 +7,6 @@ import org.hibernate.Transaction;
 
 import org.hibernate.Session;
 import org.hibernate.query.Query;
-
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.SQLException;
 import java.util.List;
 
 public class VehicleDAO {
@@ -23,30 +19,33 @@ public class VehicleDAO {
             return query.list();
         }
     }
+
     public Vehicle getVehicleById(long id) {
         try (Session session = HibernateUtil.getSessionFactory().openSession()) {
             return session.get(Vehicle.class, id);
         }
     }
+
     public boolean addVehicle(Vehicle vehicle) {
         Transaction transaction = null;
         try (Session session = HibernateUtil.getSessionFactory().openSession()) {
             transaction = session.beginTransaction();
-            session.persist(vehicle);  // Save vehicle
-            transaction.commit();  // Commit the transaction
+            session.persist(vehicle); // Save vehicle
+            transaction.commit(); // Commit the transaction
             return true;
         } catch (Exception e) {
             if (transaction != null) {
-                transaction.rollback();  // Rollback on error
+                transaction.rollback(); // Rollback on error
             }
             e.printStackTrace();
             return false;
         }
     }
+
     public boolean updateVehicle(Vehicle vehicle) {
         try (Session session = HibernateUtil.getSessionFactory().openSession()) {
             session.beginTransaction();
-            session.merge(vehicle);  // Update the vehicle in the database
+            session.merge(vehicle); // Update the vehicle in the database
             session.getTransaction().commit();
             return true;
         } catch (Exception e) {
@@ -54,10 +53,11 @@ public class VehicleDAO {
             return false;
         }
     }
+
     public static boolean deleteVehicleById(long id) {
         try (Session session = HibernateUtil.getSessionFactory().openSession()) {
             session.beginTransaction();
-    
+
             Vehicle vehicle = session.get(Vehicle.class, id);
             if (vehicle != null) {
                 session.remove(vehicle);
@@ -67,12 +67,10 @@ public class VehicleDAO {
                 session.getTransaction().rollback();
                 return false;
             }
-    
+
         } catch (Exception e) {
             e.printStackTrace();
             return false;
         }
     }
-    
-    
 }

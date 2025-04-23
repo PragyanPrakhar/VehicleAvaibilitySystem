@@ -17,7 +17,7 @@ public class CORSFilter implements Filter {
         HttpServletResponse response = (HttpServletResponse) res;
 
         // Set CORS headers
-        response.setHeader("Access-Control-Allow-Origin", "http://localhost:5174"); // React origin
+        response.setHeader("Access-Control-Allow-Origin", "http://localhost:5173"); // React origin
         response.setHeader("Access-Control-Allow-Credentials", "true");
         response.setHeader("Access-Control-Allow-Methods", "GET, POST, PUT, DELETE, OPTIONS");
         response.setHeader("Access-Control-Allow-Headers", "Content-Type, Accept");
